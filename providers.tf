@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    snowflake = {
+      source  = "snowflakedb/snowflake"
+      version = "1.0.5"
+    }
+  }
+}
+
 provider "snowflake" {
   account_name       = var.snowflake_account_name
   organization_name  = var.snowflake_organization_name
