@@ -1,16 +1,8 @@
-terraform {
-  required_providers {
-    snowflake = {
-      source  = "Snowflake-Labs/snowflake"
-      version = "~> 0.72"
-    }
-  }
-}
-
 provider "snowflake" {
-  account       = var.snowflake_account_locator   # NOT the org/account URL
-  user          = var.snowflake_user              # renamed from 'username'
-  password      = var.snowflake_password
-  role          = var.snowflake_role
-  region        = null                            # REMOVE or set to null
+  account_name       = var.snowflake_account_name
+  organization_name  = var.snowflake_organization_name
+  region             = var.snowflake_region
+  user               = var.snowflake_username
+  password           = var.snowflake_password
+  role               = var.snowflake_role
 }
