@@ -2,11 +2,12 @@ terraform {
   required_providers {
     snowflake = {
       source  = "snowflakedb/snowflake"
-      version = "~> 0.74.0" # Or latest stable
+      version = ">= 0.74.3"  # Latest recommended stable version
     }
   }
 }
 
 provider "snowflake" {
-  # All credentials are provided via environment variables
+  # No need to specify account/user/password/role here
+  # These will come from environment variables
 }
