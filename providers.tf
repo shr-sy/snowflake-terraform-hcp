@@ -2,7 +2,7 @@ terraform {
   required_providers {
     snowflake = {
       source  = "snowflakedb/snowflake"  # ✅ Correct new provider source
-      version = "0.74.2"                 # ✅ Latest known stable version
+      version = "0.74.0"                 # ✅ Latest known stable version
     }
   }
 }
