@@ -1,11 +1,11 @@
 variable "snowflake_account_name" {
   type        = string
-  description = "Snowflake account name (e.g., DW)"
+  description = "Snowflake account name (e.g., xy12345)"
 }
 
-variable "snowflake_organization_name" {
+variable "snowflake_region" {
   type        = string
-  description = "Snowflake organization name (e.g., TEMPERPACK)"
+  description = "Snowflake region (e.g., central-india.azure)"
 }
 
 variable "snowflake_username" {
@@ -22,9 +22,4 @@ variable "snowflake_password" {
 variable "snowflake_role" {
   type        = string
   description = "Snowflake role for Terraform actions"
-}
-
-variable "snowflake_region" {
-  type        = string
-  description = "Snowflake region (e.g., us-west-2)"
 }
