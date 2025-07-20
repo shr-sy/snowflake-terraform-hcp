@@ -1,14 +1,14 @@
 terraform {
   required_providers {
     snowflake = {
-      source  = "snowflakedb/snowflake"  # ✅ NOT snowflake-labs
-      version = "1.15.0"                 # ✅ latest stable as of now
+      source  = "snowflakedb/snowflake"  # ✅ Correct new provider source
+      version = "0.74.2"                 # ✅ Latest known stable version
     }
   }
 }
 
 provider "snowflake" {
-  account = "${var.snowflake_account_name}.${var.snowflake_region}"  # ✅ Old-style combined
+  account  = "${var.snowflake_account_name}.${var.snowflake_region}"  # Combined form
   username = var.snowflake_username
   password = var.snowflake_password
   role     = var.snowflake_role
