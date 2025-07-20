@@ -28,10 +28,3 @@ variable "snowflake_region" {
   type        = string
   description = "Snowflake region (e.g., us-west-2)"
 }
-providers.tf
-provider "snowflake" {
-  account            = "${var.snowflake_organization_name}.${var.snowflake_account_name}"
-  user               = var.snowflake_username
-  password           = var.snowflake_password
-  role               = var.snowflake_role
-}
