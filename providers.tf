@@ -7,7 +7,4 @@ terraform {
   }
 }
 
-provider "snowflake" {
-  # No need to specify account/user/password/role here
-  # These will come from environment variables
-}
+provider "snowflake" {}
