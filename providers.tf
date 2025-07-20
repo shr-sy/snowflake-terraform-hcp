@@ -8,10 +8,9 @@ terraform {
 }
 
 provider "snowflake" {
-  account_name      = var.snowflake_account_name
-  organization_name = var.snowflake_organization_name
-  username          = var.snowflake_username
-  password          = var.snowflake_password
-  role              = var.snowflake_role
-  region            = var.snowflake_region
+  account       = var.snowflake_account_locator   # NOT the org/account URL
+  user          = var.snowflake_user              # renamed from 'username'
+  password      = var.snowflake_password
+  role          = var.snowflake_role
+  region        = null                            # REMOVE or set to null
 }
