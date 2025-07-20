@@ -8,12 +8,12 @@ terraform {
 }
 
 locals {
-  full_snowflake_account = "${var.snowflake_account_name}.${var.snowflake_region}"
+  full_account_locator = "${var.snowflake_account_name}.${var.snowflake_region}"
 }
 
 provider "snowflake" {
-  account  = local.full_snowflake_account
-  user     = var.snowflake_username
-  password = var.snowflake_password
-  role     = var.snowflake_role
+  account_locator = local.full_account_locator
+  username        = var.snowflake_username
+  password        = var.snowflake_password
+  role            = var.snowflake_role
 }
