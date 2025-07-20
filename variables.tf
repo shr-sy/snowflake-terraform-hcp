@@ -1,30 +1,20 @@
-variable "snowflake_account_name" {
-  description = "Snowflake account name"
+variable "snowflake_account_locator" {
+  description = "Account locator only, e.g., xy12345"
   type        = string
 }
 
-variable "snowflake_organization_name" {
-  description = "Snowflake organization name"
-  type        = string
-}
-
-variable "snowflake_username" {
-  description = "Username for Snowflake"
+variable "snowflake_user" {
+  description = "Snowflake user name"
   type        = string
 }
 
 variable "snowflake_password" {
-  description = "Password for Snowflake"
+  description = "Snowflake user password"
   type        = string
   sensitive   = true
 }
 
 variable "snowflake_role" {
-  description = "Role to use in Snowflake"
-  type        = string
-}
-
-variable "snowflake_region" {
-  description = "Snowflake region (e.g., aws_us_west_2)"
+  description = "Snowflake role"
   type        = string
 }
